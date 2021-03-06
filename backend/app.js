@@ -11,6 +11,10 @@ var mysqlConnection = require('./connection');
 
 var app = express();
 
+const PORT = 3000;
+const HOST = '0.0.0.0';
+app.listen(PORT, HOST)
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
