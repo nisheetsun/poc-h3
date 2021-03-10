@@ -37,6 +37,5 @@ exports.bikes = async function (req, res, next) {
     } else {
 
     }
-    console.log(result_list, "################")
-    res.send(result_list);
+    res.send({length:result_list.length, data:result_list});
 }

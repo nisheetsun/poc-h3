@@ -14,7 +14,10 @@ WORKDIR /usr/src/app
 COPY ./backend/package*.json ./
 
 RUN npm install
-COPY ./backend .
+RUN npm install -g nodemon
+RUN apt-get update
+RUN apt-get install lsof
+# COPY ./backend .
 
 EXPOSE 3000
-CMD [ "node", "app.js" ]
+CMD [ "nodemon", "app.js" ]
